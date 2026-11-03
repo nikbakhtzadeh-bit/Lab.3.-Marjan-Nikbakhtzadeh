@@ -60,6 +60,17 @@ library(broom)
 library(performance)
 library(gt)
 
+```{r}
+# Load the dataset
+data("attitude")
+
+# Select the variables for this lab
+attitude_data <- attitude %>%
+  select(rating, complaints, learning, raises)
+
+# Examine the dataset
+head(attitude_data)
+
 # Keep the same complete-case sample for every model
 dat <- Prestige |>
   select(prestige, education, income, type) |>
